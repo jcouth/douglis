@@ -18,11 +18,14 @@
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
+  "homepage": "https://jcouth.github.io/douglis",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.29"
+    "@types/styled-components": "^5.1.29",
+    "gh-pages": "^6.1.0"
   }
 }
