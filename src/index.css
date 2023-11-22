@@ -10,3 +10,9 @@ html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 10px;
 }
+
+@font-face {
+  font-family: 'CityStencil';
+  src: local('CityStencil'),
+    url('./assets/fonts/CityStencil.ttf') format('truetype');
+}
