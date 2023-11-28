@@ -11,6 +11,8 @@ export const Container = styled.div`
 
   position: relative;
 
+  padding: 2rem;
+
   width: 100%;
   min-height: 100vh;
 
@@ -45,7 +47,13 @@ export const ReactPlayerWrapper = styled.div`
     width: 100vw;
     height: 100vh;
 
-    transform: scale(1.5);
+    transform: scale(6);
+  }
+
+  @media screen and (min-width: 769px) {
+    iframe {
+      transform: scale(1.5);
+    }
   }
 `;
 
@@ -74,7 +82,7 @@ export const Content = styled.div`
 
 export const Title = styled.div`
   font-family: 'CityStencil';
-  font-size: 8rem;
+  font-size: 4rem;
 
   color: #cec1e0;
   text-align: center;
@@ -88,6 +96,10 @@ export const Title = styled.div`
 
   &.wrong {
     color: #9e1010;
+  }
+
+  @media screen and (min-width: 769px) {
+    font-size: 8rem;
   }
 `;
 
@@ -140,7 +152,7 @@ export const Input = styled.input.attrs({ type: 'text' })`
   background: transparent;
 
   font-family: 'CityStencil';
-  font-size: 4rem;
+  font-size: 3rem;
   color: #cec1e0;
   text-align: center;
   text-shadow: 0.5rem 0.5rem 1rem black;
@@ -152,6 +164,10 @@ export const Input = styled.input.attrs({ type: 'text' })`
   &.wrong {
     border-bottom-color: #9e1010;
     color: #9e1010;
+  }
+
+  @media screen and (min-width: 769px) {
+    font-size: 4rem;
   }
 `;
 
@@ -192,13 +208,18 @@ export const QRCode = styled.img.attrs({
   top: 50%;
   left: 50%;
 
-  height: 40rem;
+  height: 35rem;
 
   transition: all 1s ease-in-out;
   transform: translate(300%, -50%);
+  opacity: 0;
 
   &.right {
     transform: translate(-50%, -50%);
     opacity: 1;
+  }
+
+  iframe {
+    height: 40rem;
   }
 `;
